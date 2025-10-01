@@ -16,7 +16,8 @@ int main(int argc, char* argv[]) {
         std::cerr << "Usage: " << argv[0] << " <image_file>" << std::endl;
         return 1;
     }
-    else if (std::string(argv[1]).find(".png") == std::string::npos) { // Check for png extension
+    
+    if (std::string(argv[1]).find(".png") == std::string::npos) { // Check for png extension
         std::cerr << "Error: " << argv[1] << " is not a PNG image." << std::endl;
         return 1;
     }
